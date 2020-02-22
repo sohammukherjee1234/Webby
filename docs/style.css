@@ -1,0 +1,300 @@
+.mycontainer {
+  width: 100vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-image: radial-gradient(#393D4E, #292B32, #1C1D20, #161717);
+}
+
+body {
+  overflow-x: hidden !important;
+  font-family: "Josefin Slab", serif;
+  overflow-y: scroll;
+  color: white !important;
+}
+
+.section-header {
+  color: white;
+  font-size: 2em;
+  margin: 2%;
+}
+
+.parallax {
+  width: 100%;
+  height: calc(100vh - 75px);
+  background: url("background.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 1;
+}
+
+.parallax-data {
+  z-index: 2;
+  position: relative;
+  color: white;
+  overflow-wrap: anywhere;
+  white-space: initial;
+}
+
+@media screen and (max-width: 1000px) {
+  .parallax-data {
+    font-size: 7vw;
+    top: 60%;
+    left: 30%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .parallax-data {
+    font-size: 5vw;
+    top: 50%;
+    left: 40%;
+  }
+}
+.navbar {
+  height: 70px;
+}
+
+.about {
+  font-family: "Josefin Slab", serif;
+  font-size: 1em;
+  margin: 1%;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  justify-content: space-around;
+}
+
+.gallery-data {
+  width: 40%;
+  min-width: 200px;
+  height: 40vh;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #474747;
+}
+
+.image {
+  align-self: center;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 70%;
+  margin-bottom: 5px;
+}
+
+.image-info {
+  font-family: "Josefin Slab", serif;
+}
+
+.missions {
+  display: flex;
+  flex-direction: column;
+}
+
+.missions-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.skill-wrapper {
+  width: 220px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  margin-top: 10%;
+}
+.skill-wrapper h2 {
+  align-self: center;
+  color: #777;
+  transition: 0.5s;
+}
+.skill-wrapper div {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.skill-wrapper div svg {
+  width: 160px;
+  height: 160px;
+}
+.skill-wrapper div svg circle {
+  stroke: #434343;
+  stroke-width: 10px;
+  fill: none;
+}
+.skill-wrapper div div {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+}
+.skill-wrapper div div h2 {
+  font-size: 40px;
+  color: #777;
+  transition: 0.5s;
+  margin-top: 50px;
+}
+.skill-wrapper:hover h2 {
+  transform: scale(1.5);
+  color: #fff;
+}
+.skill-wrapper:hover div h2 {
+  font-size: 50px;
+  color: #fff;
+}
+.skill-wrapper:hover div h2 span {
+  font-size: 24px;
+  color: #777;
+}
+
+.skill-hover {
+  color: #777;
+}
+
+.circle {
+  stroke-dasharray: 440;
+}
+
+.green {
+  stroke: #00ff43 !important;
+}
+
+.pink {
+  stroke: #e52165 !important;
+}
+
+.yellow {
+  stroke: #f3ca20 !important;
+}
+
+.blue {
+  stroke: #12a4d9 !important;
+}
+
+[score="100"] div svg .circle {
+  stroke-dashoffset: calc(440 - (440*100)/100);
+}
+
+[score="80"] div svg .circle {
+  stroke-dashoffset: calc(440 - (440*80)/100);
+}
+
+[score="70"] div svg .circle {
+  stroke-dashoffset: calc(440 - (440*70)/100);
+}
+
+.missions-info {
+  margin-top: 70px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.missions-header {
+  font-size: 1.2em;
+  font-family: "Alegreya", serif !important;
+}
+
+.mission-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.mission-details .card {
+  background-color: #474747;
+  width: 18rem;
+  margin-top: 10px;
+}
+
+.footer {
+  background-color: #474747;
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+.footer div {
+  width: 40%;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3px;
+  flex-shrink: 0;
+}
+.footer div .footer-header {
+  font-size: 1em;
+  font-family: "Alegreya", serif !important;
+}
+.footer div .footer-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.icon {
+  display: inline-block;
+  text-decoration: none;
+  padding-top: 5px;
+}
+
+.facebook-icon {
+  content: url("facebook-Icon.png");
+  width: 48px;
+  height: 48px;
+}
+.facebook-icon:hover {
+  transform: scale(1.16);
+}
+
+.instagram-icon {
+  content: url("Instagram-Icon.png");
+  width: 48px;
+  height: 48px;
+}
+.instagram-icon:hover {
+  transform: scale(1.16);
+}
+
+.twitter-icon {
+  content: url("Twitter-Icon-2.png");
+}
+
+.pay1 {
+  content: url("1.png");
+  width: 48px;
+  height: 48px;
+}
+.pay1:hover {
+  transform: scale(1.16);
+}
+
+.pay2 {
+  content: url("2.png");
+  width: 48px;
+  height: 48px;
+}
+.pay2:hover {
+  transform: scale(1.16);
+}
+
+.pay3 {
+  content: url("22.png");
+  width: 48px;
+  height: 48px;
+}
+.pay3:hover {
+  transform: scale(1.16);
+}
+
+/*# sourceMappingURL=style.css.map */
